@@ -9,7 +9,36 @@
   <body>
 
     <h1> Teste </h1>
-    <p> primeiro Teste</p>
-    <p>Olá Mundo</p>
+    <p>Primeiro Teste JS, Chartjs</p>
+    <!-- canvas é necessario para o chartjs -->
+        <canvas class="line-chart"></canvas>
+        <!-- Puxando a biblioteca -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script>
+          var ctx = document.getElementsByClassName("line-chart");
+
+          var chartGraph = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75],
+              datasets: [{
+                label: "Energia Registrada",
+                data: [5, 10, 5, 14, 20, 15, 6, 14, 8, 12, 15, 5, 10],
+                borderWidth: 6,
+                borderColor: 'rgba(77,166,253,0.65)',
+                backgroundColor: 'transparent',
+              },
+              {
+                label: "teste",
+                data: [10, 9, 25, 17, 22, 16, 4, 10, 10, 2, 7, 8, 10],
+                borderWidth: 6,
+                borderColor: 'rgba(6,204,6,0.65)',
+                backgroundColor: 'transparent',
+              }
+            ]
+            }
+          });
+
+        </script>
   </body>
 </html>
